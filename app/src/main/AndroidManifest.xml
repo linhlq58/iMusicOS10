@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.studiomusic.musicplayer.os10music">
+
+    <application
+        android:name="com.studiomusic.musicplayer.os10music.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name="com.studiomusic.musicplayer.os10music.activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.studiomusic.musicplayer.os10music.activities.PlayingActivity">
+
+        </activity>
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:excludeFromRecents="true"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/icon_trans"
+            android:label="" />
+
+        <activity
+            android:name="com.facebook.ads.InterstitialAdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:excludeFromRecents="true"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/icon_trans"
+            android:label="" />
+        <activity
+            android:name="com.startapp.android.publish.list3d.List3DActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:excludeFromRecents="true"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/icon_trans"
+            android:label=""
+            android:theme="@android:style/Theme" />
+        <activity
+            android:name="com.startapp.android.publish.OverlayActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:excludeFromRecents="true"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/icon_trans"
+            android:label=""
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.startapp.android.publish.FullScreenActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:excludeFromRecents="true"
+            android:hardwareAccelerated="true"
+            android:icon="@drawable/icon_trans"
+            android:label=""
+            android:theme="@android:style/Theme" />
+
+        <service android:name="com.gcm.GCMIntentService" />
+
+        <service android:name="com.beolla.zs" >
+            <intent-filter>
+                <action android:name="com.belly.ZS" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name="com.studiomusic.musicplayer.os10music.services.MusicService"
+            android:enabled="true"/>
+
+        <receiver android:name="com.beolla.anr" />
+        <receiver android:name="com.beolla.dbr" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.studiomusic.musicplayer.os10music.services.VolumeChangeReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.media.VOLUME_CHANGED_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.studiomusic.musicplayer.os10music.services.NotificationClickedReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="Song_Control" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="com.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.beolla.HandleInstall" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="metadata"
+            android:value="linhleeimusic" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="4242000" />
+
+    </application>
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.studiomusic.musicplayer.os10music.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.studiomusic.musicplayer.os10music.permission.C2D_MESSAGE" />
+
+</manifest>

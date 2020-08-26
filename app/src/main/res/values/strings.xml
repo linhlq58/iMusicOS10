@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">iMusicOS10</string>
+    <string name="songs_tab_name">Songs</string>
+    <string name="albums_tab_name">Albums</string>
+    <string name="artists_tab_name">Artists</string>
+    <string name="genres_tab_name">Genres</string>
+    <string name="favorites_tab_name">Favorites</string>
+    <string name="playing_text">PLAYING</string>
+    <string name="cancel_text">CANCEL</string>
+    <string name="search_hint">Search</string>
+    <string name="add_favorite">Add Favorites</string>
+    <string name="not_favorite">Not Favorites</string>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/album_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/ic_album_default"
+        app:siBorderAlpha="0"
+        app:siBorderColor="@color/colorDark"
+        app:siBorderWidth="0dp"
+        app:siRadius="4dp"
+        app:siSquare="true"/>
+
+    <com.studiomusic.musicplayer.os10music.utils.iOSTextView
+        android:id="@+id/album_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/album_image"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:maxWidth="200dp"
+        android:scrollHorizontally="true"
+        android:text="Album Name" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/ic_arrow_right" />
+
+</RelativeLayout>

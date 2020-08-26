@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        applicationId "com.studiomusic.musicplayer.os10music"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile files("libs/zen.jar")
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    compile 'com.ogaclejapan.smarttablayout:utils-v4:1.6.1@aar'
+    compile 'com.android.support:recyclerview-v7:25.0.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+}

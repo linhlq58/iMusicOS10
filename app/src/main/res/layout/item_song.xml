@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal">
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/album_art"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/ic_album_default"
+        app:siBorderAlpha="0"
+        app:siBorderColor="@color/colorDark"
+        app:siBorderWidth="0dp"
+        app:siRadius="4dp"
+        app:siSquare="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <com.studiomusic.musicplayer.os10music.utils.iOSTextViewMedium
+            android:id="@+id/song_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:scrollHorizontally="true" />
+
+        <com.studiomusic.musicplayer.os10music.utils.iOSTextView
+            android:id="@+id/song_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:scrollHorizontally="true" />
+
+    </LinearLayout>
+
+</LinearLayout>
